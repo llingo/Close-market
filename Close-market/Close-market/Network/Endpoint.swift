@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum URLCreateError: Error {
-  case invalidation
-}
-
 protocol Requestable {
   var path: String { get }
   var method: HTTPMethod { get }
@@ -66,7 +62,7 @@ final class Endpoint: Requestable {
       queryItems.append(URLQueryItem(name: $0.key, value: $0.value))
     }
     component?.queryItems = queryItems.isEmpty == false ? queryItems : nil
-    guard let url = component?.url else { throw URLCreateError.invalidation }
+    guard let url = component?.url else { throw NetworkError.InvalidateURL }
     return url
   }
 }

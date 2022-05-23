@@ -11,6 +11,7 @@ enum NetworkError: LocalizedError {
   case BadRequest
   case NotFound
   case InternalServer
+  case InvalidateURL
   
   var errorDescription: String? {
     switch self {
@@ -20,6 +21,8 @@ enum NetworkError: LocalizedError {
       return "NOT_FOUND_ERROR"
     case .InternalServer:
       return "INTERNAL_SERVER_ERROR"
+    case .InvalidateURL:
+      return "INVALIDATE_URL"
     }
   }
 }
