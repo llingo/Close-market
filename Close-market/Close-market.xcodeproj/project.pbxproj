@@ -14,6 +14,7 @@
 		B0D5C936283BEB3E00696B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C935283BEB3E00696B25 /* Assets.xcassets */; };
 		B0D5C939283BEB3E00696B25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C937283BEB3E00696B25 /* LaunchScreen.storyboard */; };
 		B0D5C949283BEE0D00696B25 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C948283BEE0D00696B25 /* NetworkService.swift */; };
+		B0D5C94C283BEFAB00696B25 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C94B283BEFAB00696B25 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B0D5C938283BEB3E00696B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0D5C93A283BEB3E00696B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0D5C948283BEE0D00696B25 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B0D5C94B283BEFAB00696B25 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D5C948283BEE0D00696B25 /* NetworkService.swift */,
+				B0D5C94B283BEFAB00696B25 /* Endpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				B0D5C92D283BEB3D00696B25 /* AppDelegate.swift in Sources */,
 				B0D5C949283BEE0D00696B25 /* NetworkService.swift in Sources */,
 				B0D5C92F283BEB3D00696B25 /* SceneDelegate.swift in Sources */,
+				B0D5C94C283BEFAB00696B25 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
