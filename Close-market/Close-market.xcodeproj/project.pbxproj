@@ -121,10 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				B0D5C94F283C01E100696B25 /* Common */,
-				B0D5C94B283BEFAB00696B25 /* Endpoint.swift */,
-				B0D5C948283BEE0D00696B25 /* NetworkService.swift */,
+				B0D5C95C283C0FE600696B25 /* Infrastructure */,
 				B0D5C95A283C06F700696B25 /* DefaultNetworkService.swift */,
-				B0D5C94D283BF03B00696B25 /* NetworkConfiguration.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -132,9 +130,9 @@
 		B0D5C94F283C01E100696B25 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B0D5C950283C01E800696B25 /* HTTPMethod.swift */,
-				B0D5C952283C01EC00696B25 /* NetworkError.swift */,
 				B0D5C954283C038300696B25 /* Cancelable.swift */,
+				B0D5C952283C01EC00696B25 /* NetworkError.swift */,
+				B0D5C950283C01E800696B25 /* HTTPMethod.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -153,6 +151,16 @@
 				B0D5C958283C057600696B25 /* URLSessionTask+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B0D5C95C283C0FE600696B25 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5C94B283BEFAB00696B25 /* Endpoint.swift */,
+				B0D5C948283BEE0D00696B25 /* NetworkService.swift */,
+				B0D5C94D283BF03B00696B25 /* NetworkConfiguration.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
