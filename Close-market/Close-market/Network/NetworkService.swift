@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+protocol NetworkService {
+  func get(endpoint: Requestable, completion: @escaping (Data) -> Cancelable)
+  func post(endpoint: Requestable, completion: @escaping (Data) -> Cancelable)
+  func patch(endpoint: Requestable, completion: @escaping (Data) -> Cancelable)
+  func delete(endpoint: Requestable, completion: @escaping (Data) -> Cancelable)
+}
