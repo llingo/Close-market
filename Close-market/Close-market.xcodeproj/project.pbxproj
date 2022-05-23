@@ -19,6 +19,7 @@
 		B0D5C951283C01E800696B25 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C950283C01E800696B25 /* HTTPMethod.swift */; };
 		B0D5C953283C01EC00696B25 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C952283C01EC00696B25 /* HTTPError.swift */; };
 		B0D5C955283C038300696B25 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C954283C038300696B25 /* Cancelable.swift */; };
+		B0D5C959283C057600696B25 /* URLSessionTask+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C958283C057600696B25 /* URLSessionTask+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B0D5C950283C01E800696B25 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		B0D5C952283C01EC00696B25 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 		B0D5C954283C038300696B25 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		B0D5C958283C057600696B25 /* URLSessionTask+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionTask+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				B0D5C946283BED5300696B25 /* Network */,
 				B0D5C942283BEBE100696B25 /* View */,
 				B0D5C941283BEBDB00696B25 /* Controllers */,
+				B0D5C956283C055700696B25 /* Util */,
 				B0D5C944283BEBEE00696B25 /* Resource */,
 			);
 			path = "Close-market";
@@ -131,6 +134,22 @@
 				B0D5C954283C038300696B25 /* Cancelable.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B0D5C956283C055700696B25 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5C957283C056600696B25 /* Extension */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		B0D5C957283C056600696B25 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5C958283C057600696B25 /* URLSessionTask+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +226,7 @@
 				B0D5C955283C038300696B25 /* Cancelable.swift in Sources */,
 				B0D5C931283BEB3D00696B25 /* ViewController.swift in Sources */,
 				B0D5C92D283BEB3D00696B25 /* AppDelegate.swift in Sources */,
+				B0D5C959283C057600696B25 /* URLSessionTask+Extension.swift in Sources */,
 				B0D5C951283C01E800696B25 /* HTTPMethod.swift in Sources */,
 				B0D5C949283BEE0D00696B25 /* NetworkService.swift in Sources */,
 				B0D5C953283C01EC00696B25 /* HTTPError.swift in Sources */,
