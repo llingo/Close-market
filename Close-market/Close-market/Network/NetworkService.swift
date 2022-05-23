@@ -10,6 +10,6 @@ import Foundation
 protocol NetworkService {
   func request(
     endpoint: Requestable,
-    completion: @escaping (Result<Data, HTTPError>) -> Void
+    completion: @escaping (Result<Data, NetworkError>) -> Void
   ) -> Cancelable?
 }
