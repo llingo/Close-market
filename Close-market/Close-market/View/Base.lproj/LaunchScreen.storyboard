@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="z1Y-9i-MQg">
-                                <rect key="frame" x="124" y="365" width="166" height="166"/>
+                                <rect key="frame" x="145" y="386" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="z1Y-9i-MQg" secondAttribute="height" multiplier="1:1" id="crC-Fu-R7o"/>
                                 </constraints>
@@ -29,7 +29,7 @@
                         <constraints>
                             <constraint firstItem="z1Y-9i-MQg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9GW-IV-cC2"/>
                             <constraint firstItem="z1Y-9i-MQg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VKg-aV-x4w"/>
-                            <constraint firstItem="z1Y-9i-MQg" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.4" id="sVc-9E-Cbi"/>
+                            <constraint firstItem="z1Y-9i-MQg" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="sVc-9E-Cbi"/>
                         </constraints>
                     </view>
                 </viewController>

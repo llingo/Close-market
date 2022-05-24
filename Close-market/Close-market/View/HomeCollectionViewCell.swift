@@ -24,10 +24,15 @@ final class HomeCollectionViewCell: UICollectionViewCell {
     self.priceLabel.text = nil
   }
   
-  func configure() {
-    self.titleLabel.text = "아이패드 Pro"
-    self.priceLabel.text = "399,000원"
-    self.thumbnailImageView.image = UIImage(named: "ActivityIndicator")
+  func configure(with product: Product) {
+    self.titleLabel.text = product.name
+    self.priceLabel.text = "\(product.price)"
+    self.thumbnailImageView.image = setImage(thumbnail: product.thumbnail)
+  }
+  
+  func setImage(thumbnail: String) -> UIImage {
+    let data = try! Data(contentsOf: URL(string: thumbnail)!)
+    return UIImage(data: data)!
   }
 }
 

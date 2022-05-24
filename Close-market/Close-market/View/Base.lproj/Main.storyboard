@@ -106,17 +106,23 @@
                                                         <constraint firstAttribute="width" secondItem="oJ7-pD-aII" secondAttribute="height" multiplier="1:1" id="YiJ-c0-b6U"/>
                                                     </constraints>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ynk-Ye-Xee">
-                                                    <rect key="frame" x="142" y="20" width="232" height="75"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ynk-Ye-Xee">
+                                                    <rect key="frame" x="142" y="20" width="232" height="90"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="델 노트북 판매합니다" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruZ-tw-6Hf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="232" height="35"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="상품 제목" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruZ-tw-6Hf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="232" height="36"/>
                                                             <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="789,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjQ-KB-iOT">
-                                                            <rect key="frame" x="0.0" y="35" width="232" height="40"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강남구 - 끝올 10분전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg0-oe-hm2">
+                                                            <rect key="frame" x="0.0" y="42" width="232" height="18"/>
+                                                            <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="12"/>
+                                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품 가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjQ-KB-iOT">
+                                                            <rect key="frame" x="0.0" y="66" width="232" height="24"/>
                                                             <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -135,14 +141,13 @@
                                                 <constraint firstAttribute="bottom" secondItem="chR-WO-k2r" secondAttribute="bottom" id="6fw-sw-Joj"/>
                                                 <constraint firstAttribute="bottom" secondItem="oJ7-pD-aII" secondAttribute="bottom" constant="20" id="9wO-Nd-rzK"/>
                                                 <constraint firstItem="Ynk-Ye-Xee" firstAttribute="leading" secondItem="oJ7-pD-aII" secondAttribute="trailing" constant="16" id="FiJ-4X-NOn"/>
-                                                <constraint firstItem="Ynk-Ye-Xee" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="oJ7-pD-aII" secondAttribute="bottom" id="GL1-6e-gnj"/>
+                                                <constraint firstItem="Ynk-Ye-Xee" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oJ7-pD-aII" secondAttribute="bottom" priority="750" constant="-20" id="GL1-6e-gnj"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ynk-Ye-Xee" secondAttribute="trailing" constant="16" id="MJo-NZ-SJW"/>
                                                 <constraint firstItem="Ynk-Ye-Xee" firstAttribute="top" secondItem="oJ7-pD-aII" secondAttribute="top" id="Ux9-xo-8kJ"/>
                                                 <constraint firstItem="chR-WO-k2r" firstAttribute="leading" secondItem="tAV-wc-369" secondAttribute="leading" constant="16" id="eIA-uG-B8D"/>
                                                 <constraint firstItem="oJ7-pD-aII" firstAttribute="top" secondItem="tAV-wc-369" secondAttribute="top" constant="20" id="nUP-wA-cKP"/>
                                                 <constraint firstItem="oJ7-pD-aII" firstAttribute="leading" secondItem="tAV-wc-369" secondAttribute="leading" constant="16" id="oPJ-nW-5BJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="chR-WO-k2r" secondAttribute="trailing" constant="16" id="v4X-rZ-Pig"/>
-                                                <constraint firstItem="yjQ-KB-iOT" firstAttribute="centerY" secondItem="oJ7-pD-aII" secondAttribute="centerY" priority="750" id="vtU-su-XPS"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -179,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5" y="121"/>
+            <point key="canvasLocation" x="4.615384615384615" y="120.85308056872037"/>
         </scene>
     </scenes>
     <resources>
@@ -196,6 +201,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
