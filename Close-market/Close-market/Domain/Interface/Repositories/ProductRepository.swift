@@ -9,7 +9,8 @@ import Foundation
 
 protocol ProductRepository {
   func fetchProductAll(
-    queries: [String: Any],
+    pageNumber: Int,
+    itemsPerPage: Int,
     completion: @escaping (Result<[Product], NetworkError>) -> Void
   )
   
