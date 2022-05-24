@@ -13,7 +13,6 @@ final class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    collectionView.delegate = self
   }
 }
 
