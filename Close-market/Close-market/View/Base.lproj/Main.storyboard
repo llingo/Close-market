@@ -50,7 +50,7 @@
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="18"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
-                                        <state key="normal" title="지역명 " image="iconDownarrow">
+                                        <state key="normal" title="강남구 " image="iconDownarrow">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                     </button>

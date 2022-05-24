@@ -11,6 +11,9 @@ final class HomeViewController: UIViewController {
   @IBOutlet weak var regionLabel: UIButton!
   @IBOutlet weak var collectionView: UICollectionView!
   
+  private var currentPageNumber = 1
+  private var itemsPerPage = 20
+  
   private lazy var refreshControl: UIRefreshControl = {
     let refresh = UIRefreshControl()
     refresh.addTarget(self, action: #selector(refreshData), for: .valueChanged)
@@ -25,15 +28,22 @@ final class HomeViewController: UIViewController {
     }
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.paging()
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.collectionView.refreshControl = refreshControl
-    self.fetchProducts()
   }
   
   @objc private func refreshData(_ sender: UIRefreshControl) {
-    self.fetchProducts()
-    self.refreshControl.endRefreshing()
+    if sender.isRefreshing {
+      self.fetchProducts()
+      self.currentPageNumber = 1
+      self.refreshControl.endRefreshing()
+    }
   }
   
   private func fetchProducts() {
@@ -41,9 +51,32 @@ final class HomeViewController: UIViewController {
     let config = DefaultNetworkConfiguration(baseURL: URL(string: baseURL)!)
     let service = DefaultNetworkService(configuration: config, session: .shared)
     let repo = DefaultProductRepository(service: service)
-    repo.fetchProductAll(pageNumber: 1, itemsPerPage: 100) { [weak self] result in
+    repo.fetchProductAll(pageNumber: 1, itemsPerPage: itemsPerPage) { [weak self] result in
       guard case let .success(products) = result else { return }
       self?.products = products
+    }
+  }
+  
+  private func paging() {
+    let baseURL = "https://market-training.yagom-academy.kr"
+    let config = DefaultNetworkConfiguration(baseURL: URL(string: baseURL)!)
+    let service = DefaultNetworkService(configuration: config, session: .shared)
+    let repo = DefaultProductRepository(service: service)
+    repo.fetchProductAll(pageNumber: currentPageNumber, itemsPerPage: itemsPerPage) { [weak self] result in
+      guard case let .success(products) = result else { return }
+      self?.products.append(contentsOf: products)
+    }
+  }
+  
+  
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let offsetY = scrollView.contentOffset.y
+    let contentHeight = scrollView.contentSize.height
+    let height = scrollView.frame.height
+    
+    if offsetY > (contentHeight - height) {
+      self.currentPageNumber += 1
+      self.paging()
     }
   }
 }
