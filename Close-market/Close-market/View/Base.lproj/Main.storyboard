@@ -123,15 +123,25 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chR-WO-k2r">
+                                                    <rect key="frame" x="16" y="149" width="358" height="1"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="roh-LK-qI3"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="chR-WO-k2r" secondAttribute="bottom" id="6fw-sw-Joj"/>
                                                 <constraint firstAttribute="bottom" secondItem="oJ7-pD-aII" secondAttribute="bottom" constant="20" id="9wO-Nd-rzK"/>
                                                 <constraint firstItem="Ynk-Ye-Xee" firstAttribute="leading" secondItem="oJ7-pD-aII" secondAttribute="trailing" constant="16" id="FiJ-4X-NOn"/>
                                                 <constraint firstItem="Ynk-Ye-Xee" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="oJ7-pD-aII" secondAttribute="bottom" id="GL1-6e-gnj"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ynk-Ye-Xee" secondAttribute="trailing" constant="16" id="MJo-NZ-SJW"/>
                                                 <constraint firstItem="Ynk-Ye-Xee" firstAttribute="top" secondItem="oJ7-pD-aII" secondAttribute="top" id="Ux9-xo-8kJ"/>
+                                                <constraint firstItem="chR-WO-k2r" firstAttribute="leading" secondItem="tAV-wc-369" secondAttribute="leading" constant="16" id="eIA-uG-B8D"/>
                                                 <constraint firstItem="oJ7-pD-aII" firstAttribute="top" secondItem="tAV-wc-369" secondAttribute="top" constant="20" id="nUP-wA-cKP"/>
                                                 <constraint firstItem="oJ7-pD-aII" firstAttribute="leading" secondItem="tAV-wc-369" secondAttribute="leading" constant="16" id="oPJ-nW-5BJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="chR-WO-k2r" secondAttribute="trailing" constant="16" id="v4X-rZ-Pig"/>
                                                 <constraint firstItem="yjQ-KB-iOT" firstAttribute="centerY" secondItem="oJ7-pD-aII" secondAttribute="centerY" priority="750" id="vtU-su-XPS"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -183,6 +193,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
