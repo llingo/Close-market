@@ -36,16 +36,20 @@ extension HomeViewController: UICollectionViewDataSource {
     _ collectionView: UICollectionView,
     numberOfItemsInSection section: Int
   ) -> Int {
-    return 20
+    return 1
   }
   
   func collectionView(
     _ collectionView: UICollectionView,
     cellForItemAt indexPath: IndexPath
   ) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(
+    guard let cell = collectionView.dequeueReusableCell(
       withReuseIdentifier: HomeCollectionViewCell.identifier,
-      for: indexPath)
+      for: indexPath) as? HomeCollectionViewCell else {
+      return UICollectionViewCell()
+    }
+    
+    cell.configure()
     return cell
   }
 }
