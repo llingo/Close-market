@@ -43,7 +43,9 @@ extension HomeViewController: UICollectionViewDataSource {
     _ collectionView: UICollectionView,
     cellForItemAt indexPath: IndexPath
   ) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CELL", for: indexPath)
+    let cell = collectionView.dequeueReusableCell(
+      withReuseIdentifier: HomeCollectionViewCell.identifier,
+      for: indexPath)
     return cell
   }
 }
