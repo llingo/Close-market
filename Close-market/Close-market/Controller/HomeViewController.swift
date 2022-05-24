@@ -11,8 +11,25 @@ final class HomeViewController: UIViewController {
   @IBOutlet weak var regionLabel: UIButton!
   @IBOutlet weak var collectionView: UICollectionView!
   
+  private var products = [Product]() {
+    didSet {
+      DispatchQueue.main.async {
+        self.collectionView.reloadData()
+      }
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let baseURL = "https://market-training.yagom-academy.kr"
+    let config = DefaultNetworkConfiguration(baseURL: URL(string: baseURL)!)
+    let service = DefaultNetworkService(configuration: config, session: .shared)
+    let repo = DefaultProductRepository(service: service)
+    repo.fetchProductAll(pageNumber: 2, itemsPerPage: 100) { [weak self] result in
+      guard case let .success(products) = result else { return }
+      self?.products = products
+    }
   }
 }
 
@@ -35,7 +52,7 @@ extension HomeViewController: UICollectionViewDataSource {
     _ collectionView: UICollectionView,
     numberOfItemsInSection section: Int
   ) -> Int {
-    return 1
+    return self.products.count
   }
   
   func collectionView(
@@ -48,7 +65,7 @@ extension HomeViewController: UICollectionViewDataSource {
       return UICollectionViewCell()
     }
     
-    cell.configure()
+    cell.configure(with: products[indexPath.row])
     return cell
   }
 }
