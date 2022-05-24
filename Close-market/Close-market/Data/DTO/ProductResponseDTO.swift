@@ -9,10 +9,11 @@ import Foundation
 
 struct ProductResponseDTO: Decodable {
   private enum CodingKeys: String, CodingKey {
-    case offset, limit
     case pageNumber = "page_no"
     case itemsPerPage = "items_per_page"
     case totalCount = "total_count"
+    case offset
+    case limit
     case lastPage = "last_page"
     case hasNext = "has_next"
     case hasPrev = "has_prev"
@@ -32,16 +33,17 @@ struct ProductResponseDTO: Decodable {
 
 struct ProductDTO: Decodable {
   private enum CodingKeys: String, CodingKey {
-    case id, name, thumbnail, currency, price, stock
+    case id
     case vendorId = "vendor_id"
+    case name
+    case thumbnail
+    case currency
+    case price
     case bargainPrice = "bargain_price"
     case discountedPrice = "discounted_price"
+    case stock
     case createdAt = "created_at"
     case issuedAt = "issued_at"
-  }
-  
-  enum Currency: String, Decodable {
-    case KRW, USD
   }
 
   let id: Int

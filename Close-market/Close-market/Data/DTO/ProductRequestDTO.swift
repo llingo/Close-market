@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Product: Encodable {
+struct ProductRequestDTO: Encodable {
   private enum CodingKeys: String, CodingKey {
     case name
     case descriptions
@@ -16,10 +16,6 @@ struct Product: Encodable {
     case discountedPrice = "discounted_price"
     case stock
     case secret
-  }
-  
-  enum Currency: String, Encodable {
-    case KRW, USD
   }
   
   let name: String
