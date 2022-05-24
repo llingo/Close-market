@@ -21,6 +21,13 @@
 		B0D5C955283C038300696B25 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C954283C038300696B25 /* Cancellable.swift */; };
 		B0D5C959283C057600696B25 /* URLSessionTask+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C958283C057600696B25 /* URLSessionTask+Extension.swift */; };
 		B0D5C95B283C06F700696B25 /* DefaultNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C95A283C06F700696B25 /* DefaultNetworkService.swift */; };
+		B0D5C969283C90CB00696B25 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C962283C90C800696B25 /* NotoSansCJKkr-Regular.otf */; };
+		B0D5C96A283C90CB00696B25 /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C963283C90C900696B25 /* NotoSansCJKkr-Black.otf */; };
+		B0D5C96B283C90CB00696B25 /* NotoSansCJKkr-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C964283C90C900696B25 /* NotoSansCJKkr-DemiLight.otf */; };
+		B0D5C96C283C90CB00696B25 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C965283C90CA00696B25 /* NotoSansCJKkr-Bold.otf */; };
+		B0D5C96D283C90CB00696B25 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C966283C90CA00696B25 /* NotoSansCJKkr-Thin.otf */; };
+		B0D5C96E283C90CB00696B25 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C967283C90CA00696B25 /* NotoSansCJKkr-Light.otf */; };
+		B0D5C96F283C90CB00696B25 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		B0D5C954283C038300696B25 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 		B0D5C958283C057600696B25 /* URLSessionTask+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionTask+Extension.swift"; sourceTree = "<group>"; };
 		B0D5C95A283C06F700696B25 /* DefaultNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkService.swift; sourceTree = "<group>"; };
+		B0D5C962283C90C800696B25 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		B0D5C963283C90C900696B25 /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
+		B0D5C964283C90C900696B25 /* NotoSansCJKkr-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-DemiLight.otf"; sourceTree = "<group>"; };
+		B0D5C965283C90CA00696B25 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		B0D5C966283C90CA00696B25 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
+		B0D5C967283C90CA00696B25 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
+		B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +125,7 @@
 		B0D5C944283BEBEE00696B25 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B0D5C961283C90AD00696B25 /* Font */,
 				B0D5C935283BEB3E00696B25 /* Assets.xcassets */,
 				B0D5C93A283BEB3E00696B25 /* Info.plist */,
 			);
@@ -171,6 +186,20 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		B0D5C961283C90AD00696B25 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5C963283C90C900696B25 /* NotoSansCJKkr-Black.otf */,
+				B0D5C965283C90CA00696B25 /* NotoSansCJKkr-Bold.otf */,
+				B0D5C964283C90C900696B25 /* NotoSansCJKkr-DemiLight.otf */,
+				B0D5C967283C90CA00696B25 /* NotoSansCJKkr-Light.otf */,
+				B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */,
+				B0D5C962283C90C800696B25 /* NotoSansCJKkr-Regular.otf */,
+				B0D5C966283C90CA00696B25 /* NotoSansCJKkr-Thin.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,9 +258,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0D5C96A283C90CB00696B25 /* NotoSansCJKkr-Black.otf in Resources */,
 				B0D5C939283BEB3E00696B25 /* LaunchScreen.storyboard in Resources */,
+				B0D5C96B283C90CB00696B25 /* NotoSansCJKkr-DemiLight.otf in Resources */,
+				B0D5C969283C90CB00696B25 /* NotoSansCJKkr-Regular.otf in Resources */,
+				B0D5C96C283C90CB00696B25 /* NotoSansCJKkr-Bold.otf in Resources */,
 				B0D5C936283BEB3E00696B25 /* Assets.xcassets in Resources */,
 				B0D5C934283BEB3D00696B25 /* Main.storyboard in Resources */,
+				B0D5C96E283C90CB00696B25 /* NotoSansCJKkr-Light.otf in Resources */,
+				B0D5C96D283C90CB00696B25 /* NotoSansCJKkr-Thin.otf in Resources */,
+				B0D5C96F283C90CB00696B25 /* NotoSansCJKkr-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
