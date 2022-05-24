@@ -79,6 +79,8 @@ final class HomeViewController: UIViewController {
       self.paging()
     }
   }
+  
+  @IBAction func addButtonDidTap(_ sender: UIButton) {}
 }
 
 // MARK: - Delegate
