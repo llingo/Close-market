@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D5C940283BEBD400696B25 /* Application */,
-				B0D5C946283BED5300696B25 /* Network */,
+				B0D5C95D283C6F8000696B25 /* Data */,
 				B0D5C942283BEBE100696B25 /* View */,
 				B0D5C941283BEBDB00696B25 /* Controllers */,
 				B0D5C956283C055700696B25 /* Util */,
@@ -161,6 +161,14 @@
 				B0D5C94D283BF03B00696B25 /* NetworkConfiguration.swift */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		B0D5C95D283C6F8000696B25 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5C946283BED5300696B25 /* Network */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
