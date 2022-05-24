@@ -7,4 +7,4 @@
 
 import Foundation
 
-extension URLSessionTask: Cancelable {}
+extension URLSessionTask: Cancellable {}

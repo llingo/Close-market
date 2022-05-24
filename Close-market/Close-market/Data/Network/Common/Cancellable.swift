@@ -1,10 +1,10 @@
 //
-//  Cancelable.swift
+//  Cancellable.swift
 //  Close-market
 //
 //  Created by Lingo on 2022/05/24.
 //
 
-protocol Cancelable {
+protocol Cancellable {
   func cancel()
 }

@@ -11,5 +11,5 @@ protocol NetworkService {
   func request(
     endpoint: Requestable,
     completion: @escaping (Result<Data, NetworkError>) -> Void
-  ) -> Cancelable?
+  ) -> Cancellable?
 }

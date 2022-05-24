@@ -22,7 +22,7 @@ final class DefaultNetworkService: NetworkService {
   func request(
     endpoint: Requestable,
     completion: @escaping (Result<Data, NetworkError>) -> Void
-  ) -> Cancelable? {
+  ) -> Cancellable? {
     do {
       let urlRequest = try endpoint.create(with: configuration)
       return self.request(with: urlRequest, completion: completion)
@@ -35,7 +35,7 @@ final class DefaultNetworkService: NetworkService {
   private func request(
     with urlRequest: URLRequest,
     completion: @escaping (Result<Data, NetworkError>) -> Void
-  ) -> Cancelable {
+  ) -> Cancellable {
     let task = session.dataTask(with: urlRequest) { data, response, error in
       guard error == nil, let data = data else { return }
       guard let response = response as? HTTPURLResponse else { return }
