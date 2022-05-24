@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol ProductRepository {
+  func fetchProductAll(
+    queries: [String: Any],
+    completion: @escaping (Result<[Product], NetworkError>) -> Void
+  )
+  
+  func fetchProductOne(
+    productId: Int,
+    completion: @escaping (Result<Product, NetworkError>) -> Void
+  )
+}
