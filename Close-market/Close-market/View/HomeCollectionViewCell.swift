@@ -12,6 +12,8 @@ final class HomeCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
   
+  private var canceller: Cancellable?
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     self.configureUI()
@@ -19,6 +21,8 @@ final class HomeCollectionViewCell: UICollectionViewCell {
   
   override func prepareForReuse() {
     super.prepareForReuse()
+    self.canceller?.suspend()
+    self.canceller?.cancel()
     self.thumbnailImageView.image = nil
     self.titleLabel.text = nil
     self.priceLabel.text = nil
@@ -27,12 +31,7 @@ final class HomeCollectionViewCell: UICollectionViewCell {
   func configure(with product: Product) {
     self.titleLabel.text = product.name
     self.priceLabel.text = product.price.toDecimal + (product.currency == .KRW ? "원" : "달러")
-    self.thumbnailImageView.image = setImage(thumbnail: product.thumbnail)
-  }
-  
-  func setImage(thumbnail: String) -> UIImage {
-    let data = try! Data(contentsOf: URL(string: thumbnail)!)
-    return UIImage(data: data)!
+    self.canceller = thumbnailImageView.setImage(with: product.thumbnail)
   }
 }
 

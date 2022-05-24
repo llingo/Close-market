@@ -18,6 +18,7 @@
 		B026D536283D0C76001BA910 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D535283D0C76001BA910 /* APIEndpoints.swift */; };
 		B026D539283D136E001BA910 /* DefaultProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D538283D136E001BA910 /* DefaultProductRepository.swift */; };
 		B026D53B283D2501001BA910 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D53A283D2501001BA910 /* Int+Extension.swift */; };
+		B026D53D283D5575001BA910 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D53C283D5575001BA910 /* UIImageView+Extension.swift */; };
 		B0D5C92D283BEB3D00696B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C92C283BEB3D00696B25 /* AppDelegate.swift */; };
 		B0D5C92F283BEB3D00696B25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C92E283BEB3D00696B25 /* SceneDelegate.swift */; };
 		B0D5C931283BEB3D00696B25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C930283BEB3D00696B25 /* HomeViewController.swift */; };
@@ -54,6 +55,7 @@
 		B026D535283D0C76001BA910 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		B026D538283D136E001BA910 /* DefaultProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProductRepository.swift; sourceTree = "<group>"; };
 		B026D53A283D2501001BA910 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		B026D53C283D5575001BA910 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		B0D5C929283BEB3D00696B25 /* Close-market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Close-market.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D5C92C283BEB3D00696B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0D5C92E283BEB3D00696B25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				B026D51C283CE927001BA910 /* UICollectionViewCell+Extension.swift */,
 				B026D52E283D0914001BA910 /* String+Extension.swift */,
 				B026D53A283D2501001BA910 /* Int+Extension.swift */,
+				B026D53C283D5575001BA910 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				B026D536283D0C76001BA910 /* APIEndpoints.swift in Sources */,
 				B0D5C92F283BEB3D00696B25 /* SceneDelegate.swift in Sources */,
 				B026D53B283D2501001BA910 /* Int+Extension.swift in Sources */,
+				B026D53D283D5575001BA910 /* UIImageView+Extension.swift in Sources */,
 				B026D52A283D01AF001BA910 /* Currency.swift in Sources */,
 				B026D524283CF92D001BA910 /* ProductResponseDTO.swift in Sources */,
 				B026D539283D136E001BA910 /* DefaultProductRepository.swift in Sources */,
