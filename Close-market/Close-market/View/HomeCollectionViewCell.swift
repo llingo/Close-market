@@ -26,7 +26,7 @@ final class HomeCollectionViewCell: UICollectionViewCell {
   
   func configure(with product: Product) {
     self.titleLabel.text = product.name
-    self.priceLabel.text = "\(product.price)"
+    self.priceLabel.text = product.price.toDecimal + (product.currency == .KRW ? "원" : "달러")
     self.thumbnailImageView.image = setImage(thumbnail: product.thumbnail)
   }
   
