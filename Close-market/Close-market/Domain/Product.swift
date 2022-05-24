@@ -15,6 +15,6 @@ struct Product {
   let bargainPrice: Int
   let discountedPrice: Int
   let stock: Int
-  let createdAt: Date
-  let issuedAt: Date
+  let createdAt: Date?
+  let issuedAt: Date?
 }

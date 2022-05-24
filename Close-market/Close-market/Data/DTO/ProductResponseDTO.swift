@@ -58,3 +58,19 @@ struct ProductDTO: Decodable {
   let createdAt: String
   let issuedAt: String
 }
+
+extension ProductDTO {
+  func toDomain() -> Product {
+    return Product(
+      name: name,
+      thumbnail: thumbnail,
+      currency: currency,
+      price: price,
+      bargainPrice: bargainPrice,
+      discountedPrice: discountedPrice,
+      stock: stock,
+      createdAt: createdAt.toDate(),
+      issuedAt: issuedAt.toDate()
+    )
+  }
+}
