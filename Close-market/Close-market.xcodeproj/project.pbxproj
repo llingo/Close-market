@@ -15,6 +15,7 @@
 		B026D52D283D026C001BA910 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D52C283D026C001BA910 /* Product.swift */; };
 		B026D52F283D0914001BA910 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D52E283D0914001BA910 /* String+Extension.swift */; };
 		B026D534283D0A5F001BA910 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D533283D0A5F001BA910 /* ProductRepository.swift */; };
+		B026D536283D0C76001BA910 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D535283D0C76001BA910 /* APIEndpoints.swift */; };
 		B0D5C92D283BEB3D00696B25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C92C283BEB3D00696B25 /* AppDelegate.swift */; };
 		B0D5C92F283BEB3D00696B25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C92E283BEB3D00696B25 /* SceneDelegate.swift */; };
 		B0D5C931283BEB3D00696B25 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C930283BEB3D00696B25 /* HomeViewController.swift */; };
@@ -48,6 +49,7 @@
 		B026D52C283D026C001BA910 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B026D52E283D0914001BA910 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B026D533283D0A5F001BA910 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		B026D535283D0C76001BA910 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		B0D5C929283BEB3D00696B25 /* Close-market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Close-market.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D5C92C283BEB3D00696B25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0D5C92E283BEB3D00696B25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				B026D526283CFE0A001BA910 /* ProductRequestDTO.swift */,
 				B026D523283CF92D001BA910 /* ProductResponseDTO.swift */,
 				B026D529283D01AF001BA910 /* Currency.swift */,
+				B026D535283D0C76001BA910 /* APIEndpoints.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				B0D5C949283BEE0D00696B25 /* NetworkService.swift in Sources */,
 				B026D52D283D026C001BA910 /* Product.swift in Sources */,
 				B0D5C953283C01EC00696B25 /* NetworkError.swift in Sources */,
+				B026D536283D0C76001BA910 /* APIEndpoints.swift in Sources */,
 				B0D5C92F283BEB3D00696B25 /* SceneDelegate.swift in Sources */,
 				B026D52A283D01AF001BA910 /* Currency.swift in Sources */,
 				B026D524283CF92D001BA910 /* ProductResponseDTO.swift in Sources */,
