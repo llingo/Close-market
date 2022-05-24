@@ -28,6 +28,7 @@
 		B0D5C96D283C90CB00696B25 /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C966283C90CA00696B25 /* NotoSansCJKkr-Thin.otf */; };
 		B0D5C96E283C90CB00696B25 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C967283C90CA00696B25 /* NotoSansCJKkr-Light.otf */; };
 		B0D5C96F283C90CB00696B25 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */; };
+		B0D5C971283C915E00696B25 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C970283C915E00696B25 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		B0D5C966283C90CA00696B25 /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		B0D5C967283C90CA00696B25 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
 		B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		B0D5C970283C915E00696B25 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D5C958283C057600696B25 /* URLSessionTask+Extension.swift */,
+				B0D5C970283C915E00696B25 /* UIFont+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				B0D5C92D283BEB3D00696B25 /* AppDelegate.swift in Sources */,
 				B0D5C959283C057600696B25 /* URLSessionTask+Extension.swift in Sources */,
 				B0D5C951283C01E800696B25 /* HTTPMethod.swift in Sources */,
+				B0D5C971283C915E00696B25 /* UIFont+Extension.swift in Sources */,
 				B0D5C949283BEE0D00696B25 /* NetworkService.swift in Sources */,
 				B0D5C953283C01EC00696B25 /* NetworkError.swift in Sources */,
 				B0D5C92F283BEB3D00696B25 /* SceneDelegate.swift in Sources */,
