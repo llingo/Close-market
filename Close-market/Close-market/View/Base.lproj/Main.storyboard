@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qjl-bZ-EJb">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -15,7 +15,7 @@
             <objects>
                 <navigationController id="qjl-bZ-EJb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rg5-tZ-a1Y">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -31,34 +31,34 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Close_market" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqE-cv-dzc" userLabel="NavigatorView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="88"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKC-OG-tDf">
-                                        <rect key="frame" x="16" y="36" width="96.5" height="44"/>
+                                        <rect key="frame" x="15.999999999999993" y="36.333333333333343" width="96.333333333333314" height="43.666666666666657"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <buttonConfiguration key="configuration" style="plain" image="iconDownarrow" imagePlacement="trailing" title="지역명" imagePadding="8">
                                             <fontDescription key="titleFontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="20"/>
                                         </buttonConfiguration>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJ8-ID-etK">
-                                        <rect key="frame" x="269" y="36" width="129" height="44"/>
+                                        <rect key="frame" x="245" y="36.333333333333343" width="129" height="43.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-Dd-akP">
-                                                <rect key="frame" x="0.0" y="0.0" width="43" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="43" height="43.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="iconSearch" title=""/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDz-b2-oPs">
-                                                <rect key="frame" x="43" y="0.0" width="42" height="44"/>
+                                                <rect key="frame" x="43" y="0.0" width="42" height="43.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="iconList" title=""/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5r-xx-iYp">
-                                                <rect key="frame" x="85" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="85" y="0.0" width="44" height="43.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="iconAlarm" title=""/>
                                             </button>
@@ -76,24 +76,41 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4gf-qM-N4B">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L6d-LY-1c5">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L6d-LY-1c5">
+                                    <size key="itemSize" width="390" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HAx-GK-Jxo">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CELL" id="HAx-GK-Jxo">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="m6s-n0-lOn">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tAV-wc-369">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item0" translatesAutoresizingMaskIntoConstraints="NO" id="oJ7-pD-aII">
+                                                    <rect key="frame" x="16" y="20" width="110" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="oJ7-pD-aII" secondAttribute="height" multiplier="1:1" id="YiJ-c0-b6U"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="oJ7-pD-aII" secondAttribute="bottom" constant="20" id="9wO-Nd-rzK"/>
+                                                <constraint firstItem="oJ7-pD-aII" firstAttribute="top" secondItem="tAV-wc-369" secondAttribute="top" constant="20" id="nUP-wA-cKP"/>
+                                                <constraint firstItem="oJ7-pD-aII" firstAttribute="leading" secondItem="tAV-wc-369" secondAttribute="leading" constant="16" id="oPJ-nW-5BJ"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vfi-p0-jg9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nt9-xx-tdT"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -110,17 +127,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GrD-9G-HMJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="4gf-qM-N4B" id="eOA-eI-T9c"/>
+                        <outlet property="regionLabel" destination="TKC-OG-tDf" id="GEC-sb-7LT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="69"/>
+            <point key="canvasLocation" x="5" y="121"/>
         </scene>
     </scenes>
     <resources>
-        <image name="iconAlarm" width="20" height="20"/>
-        <image name="iconDownarrow" width="9" height="5"/>
-        <image name="iconList" width="18" height="19"/>
-        <image name="iconSearch" width="19" height="19"/>
+        <image name="iconAlarm" width="20" height="19.666666030883789"/>
+        <image name="iconDownarrow" width="9" height="5.3333334922790527"/>
+        <image name="iconList" width="18" height="18.666666030883789"/>
+        <image name="iconSearch" width="19" height="18.666666030883789"/>
+        <image name="item0" width="780" height="780"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
