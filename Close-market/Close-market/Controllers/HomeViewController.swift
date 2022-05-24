@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Close-market
 //
 //  Created by Lingo on 2022/05/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
   }
