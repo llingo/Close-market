@@ -11,6 +11,12 @@ final class HomeViewController: UIViewController {
   @IBOutlet weak var regionLabel: UIButton!
   @IBOutlet weak var collectionView: UICollectionView!
   
+  private lazy var refreshControl: UIRefreshControl = {
+    let refresh = UIRefreshControl()
+    refresh.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    return refresh
+  }()
+  
   private var products = [Product]() {
     didSet {
       DispatchQueue.main.async {
@@ -21,12 +27,21 @@ final class HomeViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    self.collectionView.refreshControl = refreshControl
+    self.fetchProducts()
+  }
+  
+  @objc private func refreshData(_ sender: UIRefreshControl) {
+    self.fetchProducts()
+    self.refreshControl.endRefreshing()
+  }
+  
+  private func fetchProducts() {
     let baseURL = "https://market-training.yagom-academy.kr"
     let config = DefaultNetworkConfiguration(baseURL: URL(string: baseURL)!)
     let service = DefaultNetworkService(configuration: config, session: .shared)
     let repo = DefaultProductRepository(service: service)
-    repo.fetchProductAll(pageNumber: 2, itemsPerPage: 100) { [weak self] result in
+    repo.fetchProductAll(pageNumber: 1, itemsPerPage: 100) { [weak self] result in
       guard case let .success(products) = result else { return }
       self?.products = products
     }
