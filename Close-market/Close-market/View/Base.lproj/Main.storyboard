@@ -210,7 +210,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighbor" translatesAutoresizingMaskIntoConstraints="NO" id="0qy-ut-jDt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Neighbor" translatesAutoresizingMaskIntoConstraints="NO" id="0qy-ut-jDt">
                                 <rect key="frame" x="70" y="295" width="250" height="169.33333333333337"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="준비중 🚧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFT-dY-Bdp">
@@ -237,11 +237,11 @@
     </scenes>
     <resources>
         <image name="ActivityIndicator" width="66.666664123535156" height="66.666664123535156"/>
+        <image name="Neighbor" width="250" height="169.33332824707031"/>
         <image name="iconAlarm" width="20" height="19.666666030883789"/>
         <image name="iconDownarrow" width="9" height="5.3333334922790527"/>
         <image name="iconList" width="18" height="18.666666030883789"/>
         <image name="iconSearch" width="19" height="18.666666030883789"/>
-        <image name="neighbor" width="250" height="169.33332824707031"/>
         <image name="plus" width="128" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
