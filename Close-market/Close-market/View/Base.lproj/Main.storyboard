@@ -232,12 +232,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubW-20-5rt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1626" y="121"/>
+            <point key="canvasLocation" x="1471" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--Product Register View Controller-->
         <scene sceneID="IBz-CX-t1A">
             <objects>
-                <viewController storyboardIdentifier="ProductRegisterViewController" id="Are-OK-NZI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductRegisterViewController" id="Are-OK-NZI" customClass="ProductRegisterViewController" customModule="Close_market" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mma-xr-JZ1">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,9 +250,15 @@
                                     <navigationItem title="중고거래 글쓰기" id="RoL-1N-fPP">
                                         <barButtonItem key="leftBarButtonItem" image="xmark" catalog="system" id="T4P-dh-see">
                                             <color key="tintColor" systemColor="labelColor"/>
+                                            <connections>
+                                                <action selector="cancelButtonDidTap:" destination="Are-OK-NZI" id="lCm-Wq-Uq6"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="완료" id="SVe-8W-ro3">
                                             <color key="tintColor" red="0.99906855819999996" green="0.54245465989999997" blue="0.2411904335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="registerButtonDidTap:" destination="Are-OK-NZI" id="eqq-aJ-er2"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -286,7 +292,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                                        <gestureRecognizers/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="60" id="IVp-SU-W71"/>
                                                                             <constraint firstItem="FhL-Ar-8My" firstAttribute="centerX" secondItem="amN-98-YPa" secondAttribute="centerX" id="JF0-NR-9J7"/>
@@ -295,8 +301,11 @@
                                                                             <constraint firstItem="amN-98-YPa" firstAttribute="centerY" secondItem="OOT-3v-Cfp" secondAttribute="centerY" multiplier="0.8" id="W1P-pj-XaN"/>
                                                                             <constraint firstItem="FhL-Ar-8My" firstAttribute="top" secondItem="amN-98-YPa" secondAttribute="bottom" constant="2" id="v7e-2N-KQu"/>
                                                                         </constraints>
+                                                                        <connections>
+                                                                            <outletCollection property="gestureRecognizers" destination="0Jd-uc-A1W" appends="YES" id="QZZ-cC-HB6"/>
+                                                                        </connections>
                                                                     </view>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iM-Zr-yZN">
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="3iM-Zr-yZN">
                                                                         <rect key="frame" x="95" y="12.666666666666671" width="263" height="101.33333333333333"/>
                                                                     </stackView>
                                                                 </subviews>
@@ -304,7 +313,6 @@
                                                                     <constraint firstItem="3iM-Zr-yZN" firstAttribute="centerY" secondItem="OOT-3v-Cfp" secondAttribute="centerY" id="2sp-wG-sLT"/>
                                                                     <constraint firstItem="3iM-Zr-yZN" firstAttribute="height" secondItem="jRH-ex-76x" secondAttribute="height" multiplier="0.8" id="8BM-VJ-jER"/>
                                                                     <constraint firstItem="OOT-3v-Cfp" firstAttribute="leading" secondItem="jRH-ex-76x" secondAttribute="leading" constant="19" id="AMa-LH-mmM"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="3iM-Zr-yZN" secondAttribute="trailing" id="PnV-A1-nIJ"/>
                                                                     <constraint firstItem="3iM-Zr-yZN" firstAttribute="leading" secondItem="OOT-3v-Cfp" secondAttribute="trailing" constant="16" id="R8j-SQ-c7t"/>
                                                                     <constraint firstItem="OOT-3v-Cfp" firstAttribute="centerY" secondItem="jRH-ex-76x" secondAttribute="centerY" id="kH2-9j-Aho"/>
                                                                 </constraints>
@@ -313,10 +321,11 @@
                                                         <constraints>
                                                             <constraint firstItem="jRH-ex-76x" firstAttribute="top" secondItem="lsL-9m-Epd" secondAttribute="top" id="6FE-d0-aTR"/>
                                                             <constraint firstItem="jRH-ex-76x" firstAttribute="height" secondItem="7vq-mI-qq9" secondAttribute="height" id="8JV-nO-fjI"/>
-                                                            <constraint firstItem="jRH-ex-76x" firstAttribute="width" secondItem="7vq-mI-qq9" secondAttribute="width" id="Afm-my-gGb"/>
+                                                            <constraint firstItem="jRH-ex-76x" firstAttribute="width" secondItem="7vq-mI-qq9" secondAttribute="width" priority="750" id="Afm-my-gGb"/>
                                                             <constraint firstItem="jRH-ex-76x" firstAttribute="leading" secondItem="lsL-9m-Epd" secondAttribute="leading" id="PWq-ym-dag"/>
                                                             <constraint firstItem="jRH-ex-76x" firstAttribute="bottom" secondItem="lsL-9m-Epd" secondAttribute="bottom" id="Sjo-Ov-aNt"/>
                                                             <constraint firstItem="jRH-ex-76x" firstAttribute="trailing" secondItem="lsL-9m-Epd" secondAttribute="trailing" id="Vnm-GK-Iej"/>
+                                                            <constraint firstItem="lsL-9m-Epd" firstAttribute="trailing" secondItem="3iM-Zr-yZN" secondAttribute="trailing" id="b1p-Ot-5ql"/>
                                                         </constraints>
                                                         <viewLayoutGuide key="contentLayoutGuide" id="lsL-9m-Epd"/>
                                                         <viewLayoutGuide key="frameLayoutGuide" id="7vq-mI-qq9"/>
@@ -402,10 +411,23 @@
                             <constraint firstItem="DXg-bC-7aU" firstAttribute="trailing" secondItem="F4E-yK-dhf" secondAttribute="trailing" id="xeM-Wk-d2L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="Evi-a5-iGV" id="6mb-tG-nk8"/>
+                        <outlet property="priceTextField" destination="M7s-Fr-lxV" id="Ct1-mM-7Aj"/>
+                        <outlet property="titleTextField" destination="x7U-Ys-n0V" id="7uz-Wr-9dr"/>
+                        <outlet property="uploadImageCount" destination="FhL-Ar-8My" id="Qds-tK-V3i"/>
+                        <outlet property="uploadImageStackView" destination="3iM-Zr-yZN" id="Vb8-Ke-VtW"/>
+                        <outlet property="uploadImageView" destination="OOT-3v-Cfp" id="w1G-WY-vvz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bz4-Ic-8rs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0Jd-uc-A1W">
+                    <connections>
+                        <action selector="uploadImageViewDidTap:" destination="Are-OK-NZI" id="UsD-ga-NK8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="820" y="120.85308056872037"/>
+            <point key="canvasLocation" x="729" y="121"/>
         </scene>
     </scenes>
     <resources>
@@ -426,9 +448,6 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
