@@ -87,6 +87,7 @@ final class HomeViewController: UIViewController {
     else { return }
     
     viewController.view.backgroundColor = .systemBackground
+    viewController.modalPresentationStyle = .fullScreen
     self.present(viewController, animated: true)
   }
 }
