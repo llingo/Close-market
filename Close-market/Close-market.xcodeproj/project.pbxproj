@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B007659B283E850D00FDC942 /* ProductRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007659A283E850D00FDC942 /* ProductRegisterViewController.swift */; };
 		B026D51B283CE8E6001BA910 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D51A283CE8E6001BA910 /* HomeCollectionViewCell.swift */; };
 		B026D51D283CE927001BA910 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D51C283CE927001BA910 /* UICollectionViewCell+Extension.swift */; };
 		B026D524283CF92D001BA910 /* ProductResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B026D523283CF92D001BA910 /* ProductResponseDTO.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B007659A283E850D00FDC942 /* ProductRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterViewController.swift; sourceTree = "<group>"; };
 		B026D51A283CE8E6001BA910 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		B026D51C283CE927001BA910 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		B026D523283CF92D001BA910 /* ProductResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponseDTO.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D5C930283BEB3D00696B25 /* HomeViewController.swift */,
+				B007659A283E850D00FDC942 /* ProductRegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				B026D52A283D01AF001BA910 /* Currency.swift in Sources */,
 				B026D524283CF92D001BA910 /* ProductResponseDTO.swift in Sources */,
 				B026D539283D136E001BA910 /* DefaultProductRepository.swift in Sources */,
+				B007659B283E850D00FDC942 /* ProductRegisterViewController.swift in Sources */,
 				B0D5C94C283BEFAB00696B25 /* Endpoint.swift in Sources */,
 				B0D5C94E283BF03B00696B25 /* NetworkConfiguration.swift in Sources */,
 			);
