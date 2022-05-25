@@ -202,6 +202,38 @@
             </objects>
             <point key="canvasLocation" x="4.615384615384615" y="120.85308056872037"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Bh1-aH-AZr">
+            <objects>
+                <viewController storyboardIdentifier="ProductRegisterViewController" id="LCr-CH-fEN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rcv-EM-3q0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neighbor" translatesAutoresizingMaskIntoConstraints="NO" id="0qy-ut-jDt">
+                                <rect key="frame" x="70" y="295" width="250" height="169.33333333333337"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="준비중 🚧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFT-dY-Bdp">
+                                <rect key="frame" x="153.66666666666666" y="484.66666666666669" width="83" height="30.000000000000057"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="20"/>
+                                <color key="textColor" red="0.99906855819999996" green="0.54245465989999997" blue="0.2411904335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Htg-2g-RAd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YFT-dY-Bdp" firstAttribute="top" secondItem="0qy-ut-jDt" secondAttribute="bottom" constant="20.333333333333371" id="6kv-kK-RRR"/>
+                            <constraint firstItem="YFT-dY-Bdp" firstAttribute="centerX" secondItem="0qy-ut-jDt" secondAttribute="centerX" id="7RY-W5-Kig"/>
+                            <constraint firstItem="0qy-ut-jDt" firstAttribute="centerY" secondItem="rcv-EM-3q0" secondAttribute="centerY" multiplier="0.9" id="o7Y-Vj-sVP"/>
+                            <constraint firstItem="0qy-ut-jDt" firstAttribute="centerX" secondItem="rcv-EM-3q0" secondAttribute="centerX" id="vmI-bX-01C"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubW-20-5rt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="121"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ActivityIndicator" width="66.666664123535156" height="66.666664123535156"/>
@@ -209,6 +241,7 @@
         <image name="iconDownarrow" width="9" height="5.3333334922790527"/>
         <image name="iconList" width="18" height="18.666666030883789"/>
         <image name="iconSearch" width="19" height="18.666666030883789"/>
+        <image name="neighbor" width="250" height="169.33332824707031"/>
         <image name="plus" width="128" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

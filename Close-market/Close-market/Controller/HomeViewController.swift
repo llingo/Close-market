@@ -16,6 +16,7 @@ final class HomeViewController: UIViewController {
   
   private lazy var refreshControl: UIRefreshControl = {
     let refresh = UIRefreshControl()
+    refresh.tintColor = .systemOrange
     refresh.addTarget(self, action: #selector(refreshData), for: .valueChanged)
     return refresh
   }()
@@ -80,7 +81,14 @@ final class HomeViewController: UIViewController {
     }
   }
   
-  @IBAction func addButtonDidTap(_ sender: UIButton) {}
+  @IBAction func addButtonDidTap(_ sender: UIButton) {
+    guard let viewController = self.storyboard?.instantiateViewController(
+      identifier: "ProductRegisterViewController")
+    else { return }
+    
+    viewController.view.backgroundColor = .systemBackground
+    self.present(viewController, animated: true)
+  }
 }
 
 // MARK: - Delegate
