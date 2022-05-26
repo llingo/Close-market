@@ -43,6 +43,7 @@
 		B0D5C96E283C90CB00696B25 /* NotoSansCJKkr-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C967283C90CA00696B25 /* NotoSansCJKkr-Light.otf */; };
 		B0D5C96F283C90CB00696B25 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */; };
 		B0D5C971283C915E00696B25 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C970283C915E00696B25 /* UIFont+Extension.swift */; };
+		B0E378E6283FDCA50073B5A2 /* ProductRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E378E5283FDCA50073B5A2 /* ProductRegister.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		B0D5C967283C90CA00696B25 /* NotoSansCJKkr-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Light.otf"; sourceTree = "<group>"; };
 		B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		B0D5C970283C915E00696B25 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		B0E378E5283FDCA50073B5A2 /* ProductRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductRegister.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +165,7 @@
 				B0D5C940283BEBD400696B25 /* Application */,
 				B026D52B283D025B001BA910 /* Domain */,
 				B0D5C95D283C6F8000696B25 /* Data */,
-				B0D5C942283BEBE100696B25 /* View */,
-				B0D5C941283BEBDB00696B25 /* Controller */,
+				B0E378DE283FDC1B0073B5A2 /* Presentation */,
 				B0D5C956283C055700696B25 /* Util */,
 				B0D5C944283BEBEE00696B25 /* Resource */,
 			);
@@ -180,30 +181,12 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		B0D5C941283BEBDB00696B25 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				B0D5C930283BEB3D00696B25 /* HomeViewController.swift */,
-				B007659A283E850D00FDC942 /* ProductRegisterViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		B0D5C942283BEBE100696B25 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B0D5C932283BEB3D00696B25 /* Main.storyboard */,
-				B0D5C937283BEB3E00696B25 /* LaunchScreen.storyboard */,
-				B026D51A283CE8E6001BA910 /* HomeCollectionViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		B0D5C944283BEBEE00696B25 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				B0D5C961283C90AD00696B25 /* Font */,
 				B0D5C935283BEB3E00696B25 /* Assets.xcassets */,
+				B0D5C937283BEB3E00696B25 /* LaunchScreen.storyboard */,
 				B0D5C93A283BEB3E00696B25 /* Info.plist */,
 			);
 			path = Resource;
@@ -285,6 +268,66 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		B0E378DE283FDC1B0073B5A2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B0E378E0283FDC300073B5A2 /* RegisterScene */,
+				B0E378DF283FDC2B0073B5A2 /* MainScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B0E378DF283FDC2B0073B5A2 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				B0E378E1283FDC470073B5A2 /* View */,
+				B0E378E2283FDC490073B5A2 /* Controller */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		B0E378E0283FDC300073B5A2 /* RegisterScene */ = {
+			isa = PBXGroup;
+			children = (
+				B0E378E3283FDC4F0073B5A2 /* View */,
+				B0E378E4283FDC510073B5A2 /* Controller */,
+			);
+			path = RegisterScene;
+			sourceTree = "<group>";
+		};
+		B0E378E1283FDC470073B5A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5C932283BEB3D00696B25 /* Main.storyboard */,
+				B026D51A283CE8E6001BA910 /* HomeCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0E378E2283FDC490073B5A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5C930283BEB3D00696B25 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B0E378E3283FDC4F0073B5A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B0E378E5283FDCA50073B5A2 /* ProductRegister.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0E378E4283FDC510073B5A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B007659A283E850D00FDC942 /* ProductRegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +389,7 @@
 				B0D5C96A283C90CB00696B25 /* NotoSansCJKkr-Black.otf in Resources */,
 				B0D5C939283BEB3E00696B25 /* LaunchScreen.storyboard in Resources */,
 				B0D5C96B283C90CB00696B25 /* NotoSansCJKkr-DemiLight.otf in Resources */,
+				B0E378E6283FDCA50073B5A2 /* ProductRegister.storyboard in Resources */,
 				B0D5C969283C90CB00696B25 /* NotoSansCJKkr-Regular.otf in Resources */,
 				B0D5C96C283C90CB00696B25 /* NotoSansCJKkr-Bold.otf in Resources */,
 				B0D5C936283BEB3E00696B25 /* Assets.xcassets in Resources */,

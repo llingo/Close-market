@@ -82,9 +82,9 @@ final class HomeViewController: UIViewController {
   }
   
   @IBAction func addButtonDidTap(_ sender: UIButton) {
-    guard let viewController = self.storyboard?.instantiateViewController(
+    let storyboard = UIStoryboard(name: "ProductRegister", bundle: .main)
+    let viewController = storyboard.instantiateViewController(
       identifier: "ProductRegisterViewController")
-    else { return }
     
     viewController.view.backgroundColor = .systemBackground
     viewController.modalPresentationStyle = .fullScreen
