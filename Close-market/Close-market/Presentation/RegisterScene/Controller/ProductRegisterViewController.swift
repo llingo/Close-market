@@ -8,6 +8,19 @@
 import UIKit
 
 final class ProductRegisterViewController: UIViewController {
+  private enum Const {
+    enum Message {
+      static let textViewPlaceholder = "강남구에 올릴 게시글 내용을 작성해주세요. (가품 및 판매금지 품목은 게시가 제한될 수 있어요.)"
+      static let imageUploadAlertMessage = "이미지는 최대 %d까지 첨부할 수 있어요"
+      static let alertNoticeMessage = "알림"
+      static let alertCloseMessage = "닫기"
+    }
+    enum Limit {
+      static let textViewMaximumLength = 1000
+      static let imageUploadMaximumCount = 1
+    }
+  }
+  
   @IBOutlet weak var uploadImageView: UIView!
   @IBOutlet weak var uploadImageCount: UILabel!
   @IBOutlet weak var uploadImageStackView: UIStackView!
@@ -28,11 +41,24 @@ final class ProductRegisterViewController: UIViewController {
     self.dismiss(animated: true)
   }
   @IBAction func uploadImageViewDidTap(_ sender: UITapGestureRecognizer) {
-    let picker = UIImagePickerController()
-    picker.allowsEditing = true
-    picker.sourceType = .photoLibrary
-    picker.delegate = self
-    self.present(picker, animated: true)
+    if uploadImageStackView.arrangedSubviews.count == Const.Limit.imageUploadMaximumCount {
+      let message = String(
+        format: Const.Message.imageUploadAlertMessage,
+        Const.Limit.imageUploadMaximumCount)
+      let alert = UIAlertController(
+        title: Const.Message.alertNoticeMessage,
+        message: message,
+        preferredStyle: .alert)
+      let cancel = UIAlertAction(title: Const.Message.alertCloseMessage, style: .cancel)
+      alert.addAction(cancel)
+      self.present(alert, animated: true)
+    } else {
+      let picker = UIImagePickerController()
+      picker.allowsEditing = true
+      picker.sourceType = .photoLibrary
+      picker.delegate = self
+      self.present(picker, animated: true)
+    }
   }
 }
 
@@ -40,13 +66,15 @@ final class ProductRegisterViewController: UIViewController {
 
 extension ProductRegisterViewController {
   private func configureUI() {
+    self.descriptionTextView.text = Const.Message.textViewPlaceholder
+    self.uploadImageCount.text = "0/\(Const.Limit.imageUploadMaximumCount)"
     self.uploadImageView.layer.borderWidth = 1.0
     self.uploadImageView.layer.borderColor = UIColor.systemGray5.cgColor
     self.uploadImageView.layer.cornerRadius = uploadImageView.frame.width * 0.1
   }
 }
 
-// MARK: - Delegate
+// MARK: - UIImagePickerController Delegate
 
 extension ProductRegisterViewController: UIImagePickerControllerDelegate {
   func imagePickerController(
@@ -63,7 +91,8 @@ extension ProductRegisterViewController: UIImagePickerControllerDelegate {
       imageView.contentMode = .scaleToFill
       imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
       self.uploadImageStackView.addArrangedSubview(imageView)
-      self.uploadImageCount.text = "\(self.uploadImageStackView.arrangedSubviews.count)/10"
+      let count = self.uploadImageStackView.arrangedSubviews.count
+      self.uploadImageCount.text = "\(count)/\(Const.Limit.imageUploadMaximumCount)"
     }
     self.dismiss(animated: true)
   }
@@ -80,3 +109,30 @@ extension ProductRegisterViewController: UIImagePickerControllerDelegate {
 }
 
 extension ProductRegisterViewController: UINavigationControllerDelegate {}
+
+// MARK: - UITextView Delegate
+
+extension ProductRegisterViewController: UITextViewDelegate {
+  func textViewDidBeginEditing(_ textView: UITextView) {
+    if textView.text == Const.Message.textViewPlaceholder {
+      textView.text = nil
+      textView.textColor = .label
+    } else if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+      textView.textColor = .placeholderText
+      textView.text = Const.Message.textViewPlaceholder
+    }
+  }
+  
+  func textViewDidEndEditing(_ textView: UITextView) {
+    if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+      textView.textColor = .placeholderText
+      textView.text = Const.Message.textViewPlaceholder
+    }
+  }
+  
+  func textViewDidChange(_ textView: UITextView) {
+    if textView.text.count > Const.Limit.textViewMaximumLength {
+      textView.deleteBackward()
+    }
+  }
+}
