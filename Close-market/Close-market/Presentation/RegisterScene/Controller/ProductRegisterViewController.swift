@@ -21,44 +21,66 @@ final class ProductRegisterViewController: UIViewController {
     }
   }
   
-  @IBOutlet weak var uploadImageView: UIView!
-  @IBOutlet weak var uploadImageCount: UILabel!
-  @IBOutlet weak var uploadImageStackView: UIStackView!
-  @IBOutlet weak var titleTextField: UITextField!
-  @IBOutlet weak var priceTextField: UITextField!
-  @IBOutlet weak var descriptionTextView: UITextView!
+  @IBOutlet private weak var uploadImageView: UIView!
+  @IBOutlet private weak var uploadImageCount: UILabel!
+  @IBOutlet private weak var uploadImageStackView: UIStackView!
+  @IBOutlet private weak var titleTextField: UITextField!
+  @IBOutlet private weak var priceTextField: UITextField!
+  @IBOutlet private weak var descriptionTextView: UITextView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.configureUI()
+    self.configureKeyboardToolBar()
   }
   
-  @IBAction func cancelButtonDidTap(_ sender: UIBarButtonItem) {
+  @IBAction private func cancelButtonDidTap(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true)
   }
   
-  @IBAction func registerButtonDidTap(_ sender: UIBarButtonItem) {
+  @IBAction private func registerButtonDidTap(_ sender: UIBarButtonItem) {
     self.dismiss(animated: true)
   }
-  @IBAction func uploadImageViewDidTap(_ sender: UITapGestureRecognizer) {
-    if uploadImageStackView.arrangedSubviews.count == Const.Limit.imageUploadMaximumCount {
-      let message = String(
-        format: Const.Message.imageUploadAlertMessage,
-        Const.Limit.imageUploadMaximumCount)
-      let alert = UIAlertController(
-        title: Const.Message.alertNoticeMessage,
-        message: message,
-        preferredStyle: .alert)
-      let cancel = UIAlertAction(title: Const.Message.alertCloseMessage, style: .cancel)
-      alert.addAction(cancel)
-      self.present(alert, animated: true)
+}
+
+// MARK: - Functions
+
+extension ProductRegisterViewController {
+
+  // MARK: 이미지 업로드 관련 메서드
+  @IBAction private func uploadImageViewDidTap(_ sender: UITapGestureRecognizer) {
+    let imageCount = uploadImageStackView.arrangedSubviews.count
+    if imageCount == Const.Limit.imageUploadMaximumCount {
+      self.presentAlert()
     } else {
-      let picker = UIImagePickerController()
-      picker.allowsEditing = true
-      picker.sourceType = .photoLibrary
-      picker.delegate = self
-      self.present(picker, animated: true)
+      self.presentImagePicker()
     }
+  }
+  
+  private func presentAlert() {
+    let message = String(
+      format: Const.Message.imageUploadAlertMessage,
+      Const.Limit.imageUploadMaximumCount
+    )
+    let alert = UIAlertController(
+      title: Const.Message.alertNoticeMessage,
+      message: message,
+      preferredStyle: .alert
+    )
+    let cancel = UIAlertAction(
+      title: Const.Message.alertCloseMessage,
+      style: .cancel
+    )
+    alert.addAction(cancel)
+    self.present(alert, animated: true)
+  }
+  
+  private func presentImagePicker() {
+    let picker = UIImagePickerController()
+    picker.delegate = self
+    picker.allowsEditing = true
+    picker.sourceType = .photoLibrary
+    self.present(picker, animated: true)
   }
 }
 
@@ -72,10 +94,37 @@ extension ProductRegisterViewController {
     self.uploadImageView.layer.borderColor = UIColor.systemGray5.cgColor
     self.uploadImageView.layer.cornerRadius = uploadImageView.frame.width * 0.1
   }
+  
+  private func configureKeyboardToolBar() {
+    let toolBar = UIToolbar()
+    let image = UIImage(systemName: "keyboard.chevron.compact.down")
+    let keyboard = UIBarButtonItem(
+      image: image,
+      style: .plain,
+      target: self,
+      action: #selector(keyBoardBarButtonDidTap)
+    )
+    keyboard.tintColor = .label
+    let flexible = UIBarButtonItem(
+      barButtonSystemItem: .flexibleSpace,
+      target: nil,
+      action: nil
+    )
+    toolBar.sizeToFit()
+    toolBar.setItems([flexible, keyboard], animated: false)
+    self.descriptionTextView.inputAccessoryView = toolBar
+  }
+  
+  @objc private func keyBoardBarButtonDidTap() {
+    self.view.endEditing(true)
+  }
 }
 
-// MARK: - UIImagePickerController Delegate
+// MARK: - Delegates
 
+// MARK: UIImagePickerController Delegate
+
+extension ProductRegisterViewController: UINavigationControllerDelegate {}
 extension ProductRegisterViewController: UIImagePickerControllerDelegate {
   func imagePickerController(
     _ picker: UIImagePickerController,
@@ -108,9 +157,7 @@ extension ProductRegisterViewController: UIImagePickerControllerDelegate {
   }
 }
 
-extension ProductRegisterViewController: UINavigationControllerDelegate {}
-
-// MARK: - UITextView Delegate
+// MARK: UITextView Delegate
 
 extension ProductRegisterViewController: UITextViewDelegate {
   func textViewDidBeginEditing(_ textView: UITextView) {
