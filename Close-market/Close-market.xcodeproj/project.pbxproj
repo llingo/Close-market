@@ -44,6 +44,7 @@
 		B0D5C96F283C90CB00696B25 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */; };
 		B0D5C971283C915E00696B25 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5C970283C915E00696B25 /* UIFont+Extension.swift */; };
 		B0E378E6283FDCA50073B5A2 /* ProductRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E378E5283FDCA50073B5A2 /* ProductRegister.storyboard */; };
+		B0E378E8284002550073B5A2 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E378E7284002550073B5A2 /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		B0D5C968283C90CB00696B25 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		B0D5C970283C915E00696B25 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		B0E378E5283FDCA50073B5A2 /* ProductRegister.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductRegister.storyboard; sourceTree = "<group>"; };
+		B0E378E7284002550073B5A2 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				B026D52E283D0914001BA910 /* String+Extension.swift */,
 				B026D53A283D2501001BA910 /* Int+Extension.swift */,
 				B026D53C283D5575001BA910 /* UIImageView+Extension.swift */,
+				B0E378E7284002550073B5A2 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				B026D53B283D2501001BA910 /* Int+Extension.swift in Sources */,
 				B026D53D283D5575001BA910 /* UIImageView+Extension.swift in Sources */,
 				B026D52A283D01AF001BA910 /* Currency.swift in Sources */,
+				B0E378E8284002550073B5A2 /* UIImage+Extension.swift in Sources */,
 				B026D524283CF92D001BA910 /* ProductResponseDTO.swift in Sources */,
 				B026D539283D136E001BA910 /* DefaultProductRepository.swift in Sources */,
 				B007659B283E850D00FDC942 /* ProductRegisterViewController.swift in Sources */,
