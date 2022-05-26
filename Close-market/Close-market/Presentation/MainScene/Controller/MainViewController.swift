@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MainViewController.swift
 //  Close-market
 //
 //  Created by Lingo on 2022/05/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class MainViewController: UIViewController {
   @IBOutlet weak var regionLabel: UIButton!
   @IBOutlet weak var collectionView: UICollectionView!
   
@@ -94,7 +94,7 @@ final class HomeViewController: UIViewController {
 
 // MARK: - Delegate
 
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
+extension MainViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(
     _ collectionView: UICollectionView,
     layout collectionViewLayout: UICollectionViewLayout,
@@ -106,7 +106,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 // MARK: - DataSource
 
-extension HomeViewController: UICollectionViewDataSource {
+extension MainViewController: UICollectionViewDataSource {
   func collectionView(
     _ collectionView: UICollectionView,
     numberOfItemsInSection section: Int
@@ -119,8 +119,8 @@ extension HomeViewController: UICollectionViewDataSource {
     cellForItemAt indexPath: IndexPath
   ) -> UICollectionViewCell {
     guard let cell = collectionView.dequeueReusableCell(
-      withReuseIdentifier: HomeCollectionViewCell.identifier,
-      for: indexPath) as? HomeCollectionViewCell else {
+      withReuseIdentifier: MainCollectionViewCell.identifier,
+      for: indexPath) as? MainCollectionViewCell else {
       return UICollectionViewCell()
     }
     

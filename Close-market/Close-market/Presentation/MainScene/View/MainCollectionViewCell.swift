@@ -1,5 +1,5 @@
 //
-//  HomeCollectionViewCell.swift
+//  MainCollectionViewCell.swift
 //  Close-market
 //
 //  Created by Lingo on 2022/05/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomeCollectionViewCell: UICollectionViewCell {
+final class MainCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var thumbnailImageView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var priceLabel: UILabel!
@@ -37,7 +37,7 @@ final class HomeCollectionViewCell: UICollectionViewCell {
 
 // MARK: - UI
 
-extension HomeCollectionViewCell {
+extension MainCollectionViewCell {
   private func configureUI() {
     self.thumbnailImageView.layer.borderWidth = 1.0
     self.thumbnailImageView.layer.borderColor = UIColor.systemGray5.cgColor
