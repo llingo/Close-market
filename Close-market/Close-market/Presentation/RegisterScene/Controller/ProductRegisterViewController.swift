@@ -17,7 +17,7 @@ final class ProductRegisterViewController: UIViewController {
     }
     enum Limit {
       static let textViewMaximumLength = 1000
-      static let imageUploadMaximumCount = 1
+      static let imageUploadMaximumCount = 10
     }
   }
   
@@ -46,8 +46,8 @@ final class ProductRegisterViewController: UIViewController {
 // MARK: - Functions
 
 extension ProductRegisterViewController {
-
-  // MARK: 이미지 업로드 관련 메서드
+  
+  // Upload image functions
   @IBAction private func uploadImageViewDidTap(_ sender: UITapGestureRecognizer) {
     let imageCount = uploadImageStackView.arrangedSubviews.count
     if imageCount == Const.Limit.imageUploadMaximumCount {
@@ -95,6 +95,7 @@ extension ProductRegisterViewController {
     self.uploadImageView.layer.cornerRadius = uploadImageView.frame.width * 0.1
   }
   
+  // Keyboard ToolBar
   private func configureKeyboardToolBar() {
     let toolBar = UIToolbar()
     let image = UIImage(systemName: "keyboard.chevron.compact.down")
@@ -131,14 +132,8 @@ extension ProductRegisterViewController: UIImagePickerControllerDelegate {
     didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
   ) {
     if let image = info[.editedImage] as? UIImage {
-      let resizedImage = resizeImage(image: image, height: uploadImageStackView.frame.height)
-      let imageView = UIImageView(image: resizedImage)
-      imageView.layer.cornerRadius = imageView.frame.width * 0.1
-      imageView.layer.borderWidth = 1.0
-      imageView.layer.borderColor = UIColor.systemGray5.cgColor
-      imageView.clipsToBounds = true
-      imageView.contentMode = .scaleToFill
-      imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
+      let resizedImage = image.resize(with: uploadImageStackView.bounds.height)
+      let imageView = createImageView(with: resizedImage)
       self.uploadImageStackView.addArrangedSubview(imageView)
       let count = self.uploadImageStackView.arrangedSubviews.count
       self.uploadImageCount.text = "\(count)/\(Const.Limit.imageUploadMaximumCount)"
@@ -146,14 +141,16 @@ extension ProductRegisterViewController: UIImagePickerControllerDelegate {
     self.dismiss(animated: true)
   }
   
-  private func resizeImage(image: UIImage, height: CGFloat) -> UIImage? {
-    let scale = height / image.size.height
-    let width = image.size.width * scale
-    UIGraphicsBeginImageContext(CGSize(width: width, height: height))
-    image.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-    let newImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    return newImage
+  private func createImageView(with image: UIImage) -> UIImageView {
+    let imageView = UIImageView(image: image)
+    imageView.layer.borderWidth = 1.0
+    imageView.layer.borderColor = UIColor.systemGray5.cgColor
+    imageView.layer.cornerRadius = imageView.frame.width * 0.1
+    imageView.clipsToBounds = true
+    imageView.contentMode = .scaleAspectFill
+    imageView.translatesAutoresizingMaskIntoConstraints = false
+    imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
+    return imageView
   }
 }
 
