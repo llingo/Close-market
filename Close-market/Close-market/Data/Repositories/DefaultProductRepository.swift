@@ -59,7 +59,7 @@ final class DefaultProductRepository: ProductRepository {
     let boundary = UUID().uuidString
     let headers = [
       "Content-Type": "multipart/form-data; boundary=\(boundary)",
-      "identifier": ""
+      "identifier": "f81d1b5f-d1b7-11ec-9676-094e9d1692c2"
     ]
     
     let boundaryPrefix = "--\(boundary)\r\n"
@@ -74,11 +74,10 @@ final class DefaultProductRepository: ProductRepository {
     for image in images {
       data.appendString(boundaryPrefix)
       data.appendString("Content-Disposition: form-data; name=\"images\"; filename=\"\(image.name)\"\r\n")
-      data.appendString("Content-Type: \(image.type)\r\n\r\n")
+      data.appendString("Content-Type: image/jpg\r\n\r\n")
       data.append(image.data)
       data.appendString("\r\n")
     }
-
     data.appendString("--\(boundary)--\r\n")
     
     let endpoint = APIEndpoints.createProduct(payload: data, headers: headers)

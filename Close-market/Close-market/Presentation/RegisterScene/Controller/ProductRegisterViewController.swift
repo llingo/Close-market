@@ -28,10 +28,18 @@ final class ProductRegisterViewController: UIViewController {
   @IBOutlet private weak var priceTextField: UITextField!
   @IBOutlet private weak var descriptionTextView: UITextView!
   
+  private var repository: ProductRepository?
+  private var images = [UIImage]()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.configureUI()
     self.configureKeyboardToolBar()
+    
+    let baseURL = "https://market-training.yagom-academy.kr"
+    let config = DefaultNetworkConfiguration(baseURL: URL(string: baseURL)!)
+    let service = DefaultNetworkService(configuration: config, session: .shared)
+    self.repository = DefaultProductRepository(service: service)
   }
   
   @IBAction private func cancelButtonDidTap(_ sender: UIBarButtonItem) {
@@ -39,7 +47,40 @@ final class ProductRegisterViewController: UIViewController {
   }
   
   @IBAction private func registerButtonDidTap(_ sender: UIBarButtonItem) {
-    self.dismiss(animated: true)
+    let alert = UIAlertController(
+      title: "메시지",
+      message: "상품을 등록하시겠습니까?",
+      preferredStyle: .alert
+    )
+    
+    let okAction = UIAlertAction(title: "확인", style: .default) { action in
+      guard let productName = self.titleTextField.text,
+            let productPrice = Int(self.priceTextField.text ?? "0"),
+            let descriptions = self.descriptionTextView.text
+      else { return }
+
+      let product = ProductRequestDTO(
+        name: productName,
+        descriptions: descriptions,
+        price: productPrice,
+        currency: .KRW,
+        discountedPrice: .zero,
+        stock: .zero,
+        secret: "9vylftzug8"
+      )
+      
+      let images = self.images.map { image in
+        ImageFile(name: "image.jpg", data: image.jpegData(compressionQuality: 0.1)!, type: "image/jpg")
+      }
+      
+      self.repository?.uploadProductOne(product: product, images: images) { _ in }
+      self.dismiss(animated: true)
+    }
+    let cancelAction = UIAlertAction(title: "취소", style: .cancel)
+    alert.addAction(okAction)
+    alert.addAction(cancelAction)
+    
+    self.present(alert, animated: true)
   }
 }
 
@@ -133,6 +174,7 @@ extension ProductRegisterViewController: UIImagePickerControllerDelegate {
   ) {
     if let image = info[.editedImage] as? UIImage {
       let resizedImage = image.resize(with: uploadImageStackView.bounds.height)
+      self.images.append(resizedImage)
       let imageView = createImageView(with: resizedImage)
       self.uploadImageStackView.addArrangedSubview(imageView)
       let count = self.uploadImageStackView.arrangedSubviews.count
