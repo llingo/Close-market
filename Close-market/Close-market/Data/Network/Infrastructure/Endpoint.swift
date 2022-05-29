@@ -44,6 +44,7 @@ final class Endpoint: Requestable {
     var request = URLRequest(url: url)
     request.httpMethod = method.rawValue
     self.headers.forEach { headers.updateValue($0.value, forKey: $0.key) }
+    request.allHTTPHeaderFields = headers
     if let httpBody = payload {
       request.httpBody = httpBody
     }
