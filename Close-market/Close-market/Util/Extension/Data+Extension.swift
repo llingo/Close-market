@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+extension Data {
+  mutating func appendString(_ text: String) {
+    guard let data = text.data(using: .utf8) else { return }
+    self.append(data)
+  }
+}
