@@ -18,4 +18,10 @@ protocol ProductRepository {
     productId: Int,
     completion: @escaping (Result<Product, NetworkError>) -> Void
   )
+  
+  func uploadProductOne(
+    product: ProductRequestDTO,
+    images: [ImageFile],
+    completion: @escaping (Result<Product, NetworkError>) -> Void
+  )
 }

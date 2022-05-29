@@ -48,4 +48,47 @@ final class DefaultProductRepository: ProductRepository {
       }
     }
   }
+  
+  func uploadProductOne(
+    product: ProductRequestDTO,
+    images: [ImageFile],
+    completion: @escaping (Result<Product, NetworkError>) -> Void
+  ) {
+    guard let jsonData = try? JSONEncoder().encode(product) else { return }
+    
+    let boundary = UUID().uuidString
+    let headers = [
+      "Content-Type": "multipart/form-data; boundary=\(boundary)",
+      "identifier": ""
+    ]
+    
+    let boundaryPrefix = "--\(boundary)\r\n"
+    
+    var data = Data()
+    data.appendString(boundaryPrefix)
+    data.appendString("Content-Disposition: form-data; name=\"params\"\r\n")
+    data.appendString("Content-Type: application/json\r\n\r\n")
+    data.append(jsonData)
+    data.appendString("\r\n")
+    
+    for image in images {
+      data.appendString(boundaryPrefix)
+      data.appendString("Content-Disposition: form-data; name=\"images\"; filename=\"\(image.name)\"\r\n")
+      data.appendString("Content-Type: \(image.type)\r\n\r\n")
+      data.append(image.data)
+      data.appendString("\r\n")
+    }
+
+    data.appendString("--\(boundary)--\r\n")
+    
+    let endpoint = APIEndpoints.createProduct(payload: data, headers: headers)
+    let _ = service.request(endpoint: endpoint) { result in
+      switch result {
+      case let .success(data):
+        print(data)
+      case let .failure(error):
+        print(error)
+      }
+    }
+  }
 }
